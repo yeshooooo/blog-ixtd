@@ -4,7 +4,7 @@
  * @version:
  * @Date: 2025-01-26 12:32:56
  * @LastEditors: yeshooo@马超
- * @LastEditTime: 2025-01-26 23:37:41
+ * @LastEditTime: 2025-01-27 02:01:50
  */
 export default [
   { text: '首页', link: '/' },
@@ -19,17 +19,29 @@ export default [
         text: 'cmake',
         link: '/cpp/cmake/',
       },
-      {
-        text: 'tools',
-        link: '/cpp/tools',
-      },
     ],
   },
   { text: 'python', link: '/' },
   { text: '前端', link: '/' },
   { text: 'cg', link: '/' },
   { text: 'cv', link: '/' },
-  { text: 'tools', link: 'https://pan.ixtd.com' },
+  {
+    text: 'tools',
+    items: [
+      {
+        text: 'linux',
+        link: '/tools/linux',
+      },
+      {
+        text: 'mac',
+        link: '/tools/mac',
+      },
+      {
+        text: 'windows',
+        link: '/tools/windows',
+      },
+    ],
+  },
   { text: 'java', link: '/markdown-examples' },
   // 外部链接导航
   // 默认打开放生就是打开新的tag，可以使用target 控制， target: _self 是在本页

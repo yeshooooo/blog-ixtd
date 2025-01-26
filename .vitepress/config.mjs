@@ -4,11 +4,17 @@
  * @version:
  * @Date: 2025-01-26 11:05:08
  * @LastEditors: yeshooo@马超
- * @LastEditTime: 2025-01-27 00:54:26
+ * @LastEditTime: 2025-01-27 02:42:50
  */
 import { defineConfig } from 'vitepress';
 import nav from './nav.mjs';
+// 自动生成侧边栏插件
 import AutoSiderbar from 'vite-plugin-vitepress-auto-sidebar';
+// 自动引入代码组图标插件
+import {
+  groupIconMdPlugin,
+  groupIconVitePlugin,
+} from 'vitepress-plugin-group-icons';
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: 'ix途岛',
@@ -116,15 +122,24 @@ export default defineConfig({
       infoLabel: '信息',
       detailsLabel: '详细信息',
     },
+    // 配置代码组图标
+    markdown: {
+      config(md) {
+        md.use(groupIconMdPlugin);
+      },
+    },
   },
 
   // 引入AutoSidebar
   // https://github.com/QC2168/vite-plugin-vitepress-auto-sidebar
   vite: {
     plugins: [
+      // 自动生成侧边栏
       AutoSiderbar({
         collapsed: true,
       }),
+      // 代码组图标
+      groupIconVitePlugin(),
     ],
   },
 });
