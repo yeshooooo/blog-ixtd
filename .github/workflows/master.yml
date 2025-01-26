@@ -46,6 +46,7 @@ jobs:
           # 私钥
           SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
           # SCP参数,是Rcync工具的参数
+          # 可以不传参数纯ssh方式，目标服务器不需安装rsync，这里使用的是rsync传输，需要也在目标服务器安装rsync
           ARGS: '-avzr --delete'
           # 源目录，编译后生成的文件目录
           SOURCE: '.vitepress/dist/'
