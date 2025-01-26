@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: 'ix途岛'
-  text: 'Intelligent Exploration'
+  text: 'Intelligent eXploration'
   tagline: 智慧与探索
   actions:
     - theme: brand
