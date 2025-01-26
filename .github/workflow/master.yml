@@ -1,0 +1,63 @@
+name: 更新博客到服务器
+
+on:
+  push:
+    # push 代码的时候 哪个分支会受到影响 这里是 main 分支
+    branches:
+      - master # 也可以设置为 具体tag
+
+# 推送之后执行一系列的任务
+jobs:
+  build:
+    # runs-on 指定job任务运行所需要的虚拟机环境(必填字段)
+    runs-on: ubuntu-latest
+    steps:
+      # 获取代码
+      # 这里使用的每个库都是使用的稳定版，而不是最新版
+      - name: 迁出代码
+        # 使用action库 action/checkout获取代码
+        uses: actions/checkout@v4
+
+      # 安装Node环境
+      - name: 安装node.js
+        # 使用action库  actions/setup-node安装node
+        uses: actions/setup-node@v4.1.0
+        with:
+          # # 自动使用 20.x 的最新 LTS 版本
+          node-version: '20'
+          # 启用 pnpm 缓存
+          cache: 'pnpm'
+      # 安装 pnpm
+      - name: 安装 pnpm
+        run: npm install -g pnpm # 全局安装 pnpm
+
+      # 安装依赖
+      - name: 安装依赖
+        run: pnpm install
+
+      # 打包
+      - name: 打包
+        run: pnpm run docs:build
+
+      # 部署到阿里云
+      - name: 发布到腾讯云
+        uses: easingthemes/ssh-deploy@v5.1.0
+        env:
+          # 私钥
+          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          # SCP参数,是Rcync工具的参数
+          ARGS: '-avzr --delete'
+          # 源目录，编译后生成的文件目录
+          SOURCE: '.vitepress/dist/'
+          # 服务器ip
+          REMOTE_HOST: ${{ secrets.REMOTE_ALIHOST }}
+          # 用户
+          REMOTE_USER: 'root'
+          # 目标地址 在服务器上部署代码的地方
+          TARGET: '/opt/1panel/apps/openresty/openresty/www/sites/ixtd.com'
+      # 推送信息到微信
+      # - name: 推送信息到微信
+      #   uses: easychen/github-action-server-chan@main
+      #   with:
+      #     sendkey: ${{ secrets.SERVER_J }}
+      #     title: '网站更新完毕'
