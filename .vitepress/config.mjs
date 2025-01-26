@@ -4,7 +4,7 @@
  * @version:
  * @Date: 2025-01-26 11:05:08
  * @LastEditors: yeshooo@马超
- * @LastEditTime: 2025-01-26 22:50:54
+ * @LastEditTime: 2025-01-27 00:54:26
  */
 import { defineConfig } from 'vitepress';
 import nav from './nav.mjs';
@@ -48,7 +48,7 @@ export default defineConfig({
     // 页脚备案号
     // https://vitepress.dev/zh/reference/default-theme-config#footer
     footer: {
-      copyright: `Copyright © 2024-${new Date().getFullYear()}&nbsp;&nbsp;<a href="https://beian.miit.gov.cn" style="text-decoration:none;" target="_blank">粤ICP备2024313431号</a>`,
+      copyright: `Copyright © 2024-${new Date().getFullYear()}&nbsp;&nbsp;<a href="https://beian.miit.gov.cn/#/Integrated/index" style="text-decoration:none;" target="_blank">粤ICP备2024313431号</a>`,
     },
     // 修改上一篇下一篇为中文
     docFooter: {

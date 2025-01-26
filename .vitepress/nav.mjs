@@ -4,7 +4,7 @@
  * @version:
  * @Date: 2025-01-26 12:32:56
  * @LastEditors: yeshooo@马超
- * @LastEditTime: 2025-01-26 17:00:50
+ * @LastEditTime: 2025-01-26 23:37:41
  */
 export default [
   { text: '首页', link: '/' },
@@ -17,12 +17,7 @@ export default [
     items: [
       {
         text: 'cmake',
-        items: [
-          {
-            text: 'conan',
-            link: '/cpp/cmake/conan',
-          },
-        ],
+        link: '/cpp/cmake/',
       },
       {
         text: 'tools',
