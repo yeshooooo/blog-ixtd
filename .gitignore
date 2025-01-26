@@ -9,3 +9,7 @@
 # Dependency directories
 node_modules/
 jspm_packages/
+
+# vitepress
+.vitepress/dist/
+.vitepress/cache/
