@@ -25,8 +25,8 @@ jobs:
         with:
           # # 自动使用 20.x 的最新 LTS 版本
           node-version: '20'
-          # 启用 pnpm 缓存
-          cache: 'pnpm'
+          # # 启用 pnpm 缓存
+          # cache: 'pnpm'
       # 安装 pnpm
       - name: 安装 pnpm
         run: npm install -g pnpm # 全局安装 pnpm
