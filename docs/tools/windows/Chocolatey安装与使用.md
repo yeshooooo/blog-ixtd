@@ -42,3 +42,5 @@ choco list --local-only        #查看本地安装的软件包
 # 安装的时候一路Y即可
 choco install chocolateygui
 ```
+
+![1737917280947](image/Chocolatey安装与使用/1737917280947.png)
