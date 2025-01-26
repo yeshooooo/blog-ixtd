@@ -4,7 +4,7 @@
  * @version:
  * @Date: 2025-01-26 12:32:56
  * @LastEditors: yeshooo@马超
- * @LastEditTime: 2025-01-27 02:01:50
+ * @LastEditTime: 2025-01-27 02:55:12
  */
 export default [
   { text: '首页', link: '/' },
@@ -38,7 +38,7 @@ export default [
       },
       {
         text: 'windows',
-        link: '/tools/windows',
+        link: '/tools/windows/windows文章汇总',
       },
     ],
   },

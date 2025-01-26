@@ -1,4 +1,6 @@
-# 安装
+# Chocolatey 安装与使用
+
+## 安装
 
 [官方安装文档](https://docs.chocolatey.org/en-us/choco/setup/)
 
@@ -16,7 +18,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 
 :::
 
-# 使用
+## 使用
 
 ### 更新 chocolatey 本身
 
