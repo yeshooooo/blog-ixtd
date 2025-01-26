@@ -47,6 +47,8 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
           # SCP参数,是Rcync工具的参数
           # 可以不传参数纯ssh方式，目标服务器不需安装rsync，这里使用的是rsync传输，需要也在目标服务器安装rsync
+          # ARGS: '-avz --delete'  # 保留增量同步和清理旧文件
+          # '-r'  # 仅递归传输，不依赖 rsync
           ARGS: '-avzr --delete'
           # 源目录，编译后生成的文件目录
           SOURCE: '.vitepress/dist/'
@@ -57,7 +59,7 @@ jobs:
           # 用户
           REMOTE_USER: 'root'
           # 目标地址 在服务器上部署代码的地方
-          TARGET: '/opt/1panel/apps/openresty/openresty/www/sites/ixtd.com'
+          TARGET: '/opt/1panel/apps/openresty/openresty/www/sites/ixtd.com/index'
       # 推送信息到微信
       # - name: 推送信息到微信
       #   uses: easychen/github-action-server-chan@main
