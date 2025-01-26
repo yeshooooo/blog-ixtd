@@ -15,10 +15,27 @@ hero:
       link: /api-examples
 
 features:
-  - title: cpp
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - icon:
+      src: /features/fea-cpp.svg
+    title: Cpp
+
+  - icon:
+      src: /features/fea-cmake.svg
+    title: Cmake
+  - icon:
+      src: /features/fea-Conan.svg
+    title: Conan
+  - icon:
+      src: https://vcpkg.io/assets/mark/mark.svg
+    title: vcpkg
+  - icon:
+      src: /features/fea-Vue.svg
+    title: Vue
+  - icon:
+      src: /features/fea-TailwindCSS.svg
+    title: TailwindCSS
+
+  - icon:
+      src: /features/fea-Tools.svg
+    title: Tools
 ---

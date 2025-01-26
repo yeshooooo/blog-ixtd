@@ -14,5 +14,8 @@
   "license": "ISC",
   "devDependencies": {
     "vitepress": "^1.6.3"
+  },
+  "dependencies": {
+    "vite-plugin-vitepress-auto-sidebar": "^1.7.1"
   }
 }

@@ -4,10 +4,11 @@
  * @version:
  * @Date: 2025-01-26 11:05:08
  * @LastEditors: yeshooo@马超
- * @LastEditTime: 2025-01-26 17:04:37
+ * @LastEditTime: 2025-01-26 22:50:54
  */
 import { defineConfig } from 'vitepress';
 import nav from './nav.mjs';
+import AutoSiderbar from 'vite-plugin-vitepress-auto-sidebar';
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: 'ix途岛',
@@ -34,15 +35,15 @@ export default defineConfig({
         timeStyle: 'medium',
       },
     },
-    sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' },
-        ],
-      },
-    ],
+    // sidebar: [
+    //   {
+    //     text: 'Examples',
+    //     items: [
+    //       { text: 'Markdown Examples', link: '/markdown-examples' },
+    //       { text: 'Runtime API Examples', link: '/api-examples' },
+    //     ],
+    //   },
+    // ],
 
     // 页脚备案号
     // https://vitepress.dev/zh/reference/default-theme-config#footer
@@ -115,5 +116,15 @@ export default defineConfig({
       infoLabel: '信息',
       detailsLabel: '详细信息',
     },
+  },
+
+  // 引入AutoSidebar
+  // https://github.com/QC2168/vite-plugin-vitepress-auto-sidebar
+  vite: {
+    plugins: [
+      AutoSiderbar({
+        collapsed: true,
+      }),
+    ],
   },
 });
