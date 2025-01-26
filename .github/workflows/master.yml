@@ -40,7 +40,7 @@ jobs:
         run: pnpm run docs:build
 
       # 部署到阿里云
-      - name: 发布到腾讯云
+      - name: 部署到阿里云
         uses: easingthemes/ssh-deploy@v5.1.0
         env:
           # 私钥
@@ -51,6 +51,8 @@ jobs:
           SOURCE: '.vitepress/dist/'
           # 服务器ip
           REMOTE_HOST: ${{ secrets.REMOTE_ALIHOST }}
+          # ssh端口号, 默认22，我这里阿里云改为别的了
+          REMOTE_PORT: ${{ secrets.REMOTE_ALIPORT }}
           # 用户
           REMOTE_USER: 'root'
           # 目标地址 在服务器上部署代码的地方
