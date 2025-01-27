@@ -4,7 +4,7 @@
  * @version:
  * @Date: 2025-01-26 12:32:56
  * @LastEditors: yeshooo@马超
- * @LastEditTime: 2025-01-27 16:51:41
+ * @LastEditTime: 2025-01-27 16:57:04
  */
 export default [
   { text: '首页', link: '/' },
@@ -25,6 +25,7 @@ export default [
   { text: '前端', link: '/web' },
   { text: 'cg', link: '/cg' },
   { text: 'cv', link: '/cv' },
+  { text: 'ue', link: '/ue' },
   {
     text: 'tools',
     items: [
