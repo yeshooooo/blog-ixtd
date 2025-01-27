@@ -1,10 +1,16 @@
 # Chocolatey 安装与使用
 
+前排防杠：
+
+为什么不使用 winget 或者 scoop？
+
+答： 你爱用啥用啥，chocolatey 肯定比这俩吊就行了
+
 ## 安装
 
 [官方安装文档](https://docs.chocolatey.org/en-us/choco/setup/)
 
-管理员身份打开对于终端
+管理员身份打开对应终端
 
 ::: code-group
 
