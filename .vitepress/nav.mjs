@@ -4,7 +4,7 @@
  * @version:
  * @Date: 2025-01-26 12:32:56
  * @LastEditors: yeshooo@马超
- * @LastEditTime: 2025-01-27 02:55:12
+ * @LastEditTime: 2025-01-27 16:51:41
  */
 export default [
   { text: '首页', link: '/' },
@@ -21,10 +21,10 @@ export default [
       },
     ],
   },
-  { text: 'python', link: '/' },
-  { text: '前端', link: '/' },
-  { text: 'cg', link: '/' },
-  { text: 'cv', link: '/' },
+  { text: 'python', link: '/python' },
+  { text: '前端', link: '/web' },
+  { text: 'cg', link: '/cg' },
+  { text: 'cv', link: '/cv' },
   {
     text: 'tools',
     items: [
