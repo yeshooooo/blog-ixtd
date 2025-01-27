@@ -4,7 +4,8 @@
  * @version:
  * @Date: 2025-01-27 13:11:10
  * @LastEditors: yeshooo@马超
- * @LastEditTime: 2025-01-27 15:28:27
+ * 参考自 https://github.com/Yiov/vitepress-doc/blob/main/docs/.vitepress/theme/index.ts
+ * @LastEditTime: 2025-01-27 15:38:20
  */
 import DefaultTheme from 'vitepress/theme';
 import './style/index.css'; //引入自定义的样式
@@ -20,7 +21,7 @@ import Confetti from './components/Confetti.vue';
 // 图片缩放插件
 import mediumZoom from 'medium-zoom';
 import { onMounted, watch, nextTick } from 'vue';
-import { useRoute } from 'vitepress';
+// import { useRoute } from 'vitepress';
 
 // 配置giscus
 import giscusTalk from 'vitepress-plugin-comment-with-giscus';
@@ -39,10 +40,7 @@ export default {
     app.component('Confetti', Confetti); //注册全局组件
   },
 
-  // 图片缩放插件
   setup() {
-    // Get frontmatter and route --- discus
-    const { frontmatter } = useData();
     // 图片缩放
     const route = useRoute();
     const initZoom = () => {
@@ -58,6 +56,8 @@ export default {
     );
 
     // giscus配置
+    // Get frontmatter and route --- discus
+    const { frontmatter } = useData();
     giscusTalk(
       {
         repo: 'yeshooooo/blog-ixtd', //仓库
