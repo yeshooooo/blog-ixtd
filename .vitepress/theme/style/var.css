@@ -80,3 +80,9 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* 去掉链接下划线 */
+/* var.css */
+.vp-doc a {
+  text-decoration: none;
+}
