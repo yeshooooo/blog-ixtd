@@ -63,3 +63,11 @@
   /* border-color: #f43f5e; */
   border-color: var(--vp-c-red-2);
 }
+/* 防止图片放大后，背后没有遮盖 */
+/* .vitepress/theme/style/var.css */
+.medium-zoom-overlay {
+  z-index: 30;
+}
+.medium-zoom-image {
+  z-index: 9999 !important; /* 给的值是21，但是实测盖不住，直接999 */
+}
