@@ -71,3 +71,12 @@
 .medium-zoom-image {
   z-index: 9999 !important; /* 给的值是21，但是实测盖不住，直接999 */
 }
+
+/* 修改h1标题颜色 */
+/* .vitepress/theme/style/var.css */
+h1 {
+  background: -webkit-linear-gradient(10deg, #bca8c5 5%, #7e91f0 15%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

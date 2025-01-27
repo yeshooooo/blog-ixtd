@@ -1,0 +1,29 @@
+{
+  "publishedContentList": [
+    {
+      "name": "cpp",
+      "isFolder": true
+    },
+    {
+      "name": "public",
+      "isFolder": true
+    },
+    {
+      "name": "tools",
+      "isFolder": true
+    },
+    {
+      "name": "index.md",
+      "isFolder": false
+    }
+  ],
+  "needCleanDirFolder": true,
+  "useDataView": false,
+  "useDataViewJs": false,
+  "vitepressDir": "D:\\codes\\blog\\blog-ixtd\\.vitepress",
+  "vitepressSrcDir": "D:\\codes\\blog\\blog-ixtd\\docs",
+  "vitepressStaticDir": "",
+  "deployScriptPath": "",
+  "ignoreFileRegex": "^_",
+  "autoSyncMdFile": true
+}
