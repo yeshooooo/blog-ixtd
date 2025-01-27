@@ -24,6 +24,18 @@ choco search cmder
 choco install Cmder
 ```
 
+==这里会自动添加到环境变量==
+
+**注册到右键菜单**
+
+管理员身份运行powershell或者cmd
+
+```powershell
+Cmder.exe /REGISTER ALL
+```
+
+
+
 ## 使用
 
 ### 改成汉语先
@@ -69,6 +81,55 @@ Microsoft.PowerShell.Utility\Write-Host "`n$" -NoNewLine -ForegroundColor "DarkG
 ```
 
 [扩展你可能有用的其他的](https://stackoverflow.com/questions/68283663/how-to-get-the-lambda-symbol-in-cmder-powershell-with-posh-git-after-the-git-i)
+
+### 添加git支持
+
+```shell
+Install-Module posh-git
+```
+
+### 给cmder也配置系统代理
+
+上面的启动任务得知，cmder在启动powershell desktop和pwsh的时候，都是读的cmder自定义的配置文件`C:\tools\Cmder\vendor\profile.ps1`，这里需要将代理相关的配置写入到此文件中
+
+```powershell
+# 添加到C:\tools\Cmder\vendor\profile.ps1 文件底部
+$global:proxyUrl = "http://127.0.0.1:10808"
+
+function Enable-Proxy {
+    [System.Environment]::SetEnvironmentVariable("http_proxy", $global:proxyUrl, [System.EnvironmentVariableTarget]::Process)
+    [System.Environment]::SetEnvironmentVariable("https_proxy", $global:proxyUrl, [System.EnvironmentVariableTarget]::Process)
+    Write-Host "proxyON: $global:proxyUrl" -ForegroundColor Green
+}
+
+function Disable-Proxy {
+    [System.Environment]::SetEnvironmentVariable("http_proxy", $null, [System.EnvironmentVariableTarget]::Process)
+    [System.Environment]::SetEnvironmentVariable("https_proxy", $null, [System.EnvironmentVariableTarget]::Process)
+    Write-Host "proxyOFF" -ForegroundColor Yellow
+}
+
+# 创建别名使用更简短的命令
+Set-Alias -Name proxyhttp -Value Enable-Proxy
+Set-Alias -Name unproxyhttp -Value Disable-Proxy
+
+# 可选：添加一个查看当前代理状态的函数
+function Get-ProxyStatus {
+    $httpProxy = [System.Environment]::GetEnvironmentVariable("http_proxy", [System.EnvironmentVariableTarget]::Process)
+    $httpsProxy = [System.Environment]::GetEnvironmentVariable("https_proxy", [System.EnvironmentVariableTarget]::Process)
+    
+    if ($httpProxy -or $httpsProxy) {
+        Write-Host "Proxy Status:" -ForegroundColor Cyan
+        Write-Host "HTTP Proxy: $httpProxy"
+        Write-Host "HTTPS Proxy: $httpsProxy"
+    } else {
+        Write-Host "Proxy OFF" -ForegroundColor Gray
+    }
+}
+
+Set-Alias -Name proxystat -Value Get-ProxyStatus
+```
+
+
 
 ### 美化
 
