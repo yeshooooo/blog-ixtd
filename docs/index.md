@@ -1,10 +1,8 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
-
 hero:
-  name: 'ix途岛'
-  text: 'Intelligent eXploration'
+  name: ix途岛
+  text: Intelligent eXploration
   tagline: 智慧与探索
   actions:
     - theme: brand
@@ -13,12 +11,10 @@ hero:
     - theme: alt
       text: API Examples
       link: /api-examples
-
 features:
   - icon:
       src: /features/fea-cpp.svg
     title: Cpp
-
   - icon:
       src: /features/fea-cmake.svg
     title: Cmake
@@ -34,8 +30,10 @@ features:
   - icon:
       src: /features/fea-TailwindCSS.svg
     title: TailwindCSS
-
   - icon:
       src: /features/fea-Tools.svg
     title: Tools
 ---
+
+
+<Confetti />
