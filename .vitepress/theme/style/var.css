@@ -81,9 +81,9 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 
-/* 修改h2标题颜色 */
+/* 修改markdown中的h2标题颜色，这里不直接修改h2，因为会影响到首页中features标签中的 */
 /* .vitepress/theme/style/var.css */
-h2 {
+.vp-doc h2 {
   background: -webkit-linear-gradient(10deg, #dc9748 5%, #56b1bb 15%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -94,4 +94,32 @@ h2 {
 /* var.css */
 .vp-doc a {
   text-decoration: none;
+}
+/* .VPFeatures {
+  .items {
+    background-color: #18794e;
+  }
+} */
+
+/* 通过开发者模式定位到的元素 */
+/* 基础样式 */
+.VPFeatures.VPHomeFeatures .container .items .item.grid-4 {
+  transition: transform 0.3s ease-in-out; /* 添加过渡动画 */
+}
+
+/* Hover时的变换效果 */
+.VPFeatures.VPHomeFeatures .container .items .item.grid-4:hover {
+  transform: scale(1.05) translateY(-5px); /* 缩放 + 垂直位移 */
+  z-index: 10; /* 防止被其他元素遮挡 */
+  cursor: pointer;
+}
+
+/* 如果需要同时控制内部链接 */
+.VPFeatures.VPHomeFeatures
+  .container
+  .items
+  .item.grid-4:hover
+  .VPLink.no-icon.VPFeature {
+  transform: scale(1.02); /* 内部元素的联动缩放 */
+  background-color: rgba(255, 255, 255, 0.9); /* 附加效果示例 */
 }

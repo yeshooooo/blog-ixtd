@@ -30,6 +30,7 @@ features:
   - icon:
       src: /features/fea-Tools.svg
     title: Tools
+    link: /tools/tools
 ---
 
 <Confetti />
