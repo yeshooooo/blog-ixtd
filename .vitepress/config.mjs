@@ -4,7 +4,7 @@
  * @version:
  * @Date: 2025-01-26 11:05:08
  * @LastEditors: yeshooo@马超
- * @LastEditTime: 2025-01-27 15:44:48
+ * @LastEditTime: 2025-01-28 11:51:15
  */
 import { defineConfig } from 'vitepress';
 import nav from './nav.mjs';
@@ -53,9 +53,30 @@ export default defineConfig({
 
     // 页脚备案号
     // https://vitepress.dev/zh/reference/default-theme-config#footer
+    // footer: {
+    //   copyright: `Copyright © 2024-${new Date().getFullYear()}&nbsp;&nbsp;<a href="https://beian.miit.gov.cn/#/Integrated/index" style="text-decoration:none;" target="_blank">粤ICP备2024313431号</a>`,
+    // },
     footer: {
-      copyright: `Copyright © 2024-${new Date().getFullYear()}&nbsp;&nbsp;<a href="https://beian.miit.gov.cn/#/Integrated/index" style="text-decoration:none;" target="_blank">粤ICP备2024313431号</a>`,
+      message: `本博客由<a href="https://www.dogecloud.com/?iuid=11480" target="_blank" style="background-image: linear-gradient(120deg, #007bff 0%, #6610f2 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent; margin: 0 5px; text-decoration: none">多吉云</a>提供安全防护和加速服务，
+      由<a href="https://www.rainyun.com/Mjg4MDQ0_" target="_blank" style="
+      background-image: linear-gradient(120deg, #007bff 0%, #6610f2 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin: 0 5px; text-decoration: none">雨云</a>
+      和<a href="https://www.aliyun.com/minisite/goods?userCode=f1tn1sci" target="_blank" style="
+      background-image: linear-gradient(120deg, #007bff 0%, #6610f2 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      
+      margin: 0 5px; text-decoration: none">阿里云</a>提供云计算服务`,
+      copyright: `Copyright © 2024-${new Date().getFullYear()}&nbsp;&nbsp;<a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">粤ICP备2024313431号</a>`,
     },
+
     // 修改上一篇下一篇为中文
     docFooter: {
       prev: '上一篇',
