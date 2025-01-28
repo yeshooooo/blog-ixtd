@@ -4,13 +4,7 @@ hero:
   name: ix途岛
   text: Intelligent eXploration
   tagline: 智慧与探索
-  actions:
-    - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
+
 features:
   - icon:
       src: /features/fea-cpp.svg
@@ -38,6 +32,4 @@ features:
     title: Tools
 ---
 
-
 <Confetti />
-
