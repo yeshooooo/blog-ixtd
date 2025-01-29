@@ -23,5 +23,6 @@
     "ixtd": "link:",
     "vite-plugin-vitepress-auto-sidebar": "^1.7.1",
     "vitepress-plugin-group-icons": "^1.3.5"
-  }
+  },
+  "type": "module"
 }
