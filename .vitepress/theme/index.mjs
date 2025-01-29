@@ -5,7 +5,7 @@
  * @Date: 2025-01-27 13:11:10
  * @LastEditors: yeshooo@马超
  * 参考自 https://github.com/Yiov/vitepress-doc/blob/main/docs/.vitepress/theme/index.ts
- * @LastEditTime: 2025-01-29 00:15:57
+ * @LastEditTime: 2025-01-29 23:32:51
  */
 import DefaultTheme from 'vitepress/theme';
 import './style/index.css'; //引入自定义的样式
@@ -30,9 +30,6 @@ import { useData, useRoute } from 'vitepress';
 // 配置自定义Layout
 import MyLayout from './components/MyLayout.vue';
 
-// 配置归档组件
-import Archive from './components/Archive.vue';
-
 export default {
   extends: DefaultTheme,
   // ...DefaultTheme, //或者这样写也可
@@ -47,8 +44,6 @@ export default {
     //   };
     // }
     app.component('Confetti', Confetti); //注册全局组件
-
-    app.component('Archive', Archive); // 全局注册归档组件
   },
 
   setup() {
