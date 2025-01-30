@@ -1,5 +1,5 @@
 ---
-title: Windows 文章汇总
+title: powershell core 安装及代理配置
 author: 马超
 date: 2025/1/30 8:24
 categories:
