@@ -18,7 +18,9 @@ features:
   - icon:
       src: https://vcpkg.io/assets/mark/mark.svg
     title: vcpkg
-    
+  - icon:
+      src: /features/fea-qt.svg
+    title: qt
   - icon:
       src: /features/fea-Vue.svg
     title: Vue
@@ -36,4 +38,3 @@ features:
 ---
 
 <Confetti />
-
