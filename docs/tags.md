@@ -1,1 +1,3 @@
-<TagPage/>
+<ClientOnly>
+	<Tag />
+</ClientOnly>
