@@ -4,10 +4,11 @@
  * @version:
  * @Date: 2025-01-26 12:32:56
  * @LastEditors: yeshooo@马超
- * @LastEditTime: 2025-01-27 16:57:04
+ * @LastEditTime: 2025-01-30 11:37:54
  */
 export default [
   { text: '首页', link: '/' },
+  { text: '归档', link: '/archives' },
   // 子目录，把link改为items
   // 这里是默认找index，也可以把文章名称复制过来，注意不用带md后缀
   // activeMatch 选项后跟一个目录，可以有激活状态，就是蓝色高亮

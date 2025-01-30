@@ -1,3 +1,17 @@
+---
+titleicon:
+title: cmder 安装与使用
+titleTemplate: Vitepress
+description: 使用VItepress搭建个人博客时，需要归档和标签，利用createContentLoader进行生成
+layout: doc
+navbar: 'true'
+sidebar: 'true'
+tags: blog
+date:
+created: 2024-05-07T16:54
+updated: 2024-05-18T01:16
+---
+
 # cmder 安装与使用
 
 前排送杠精：
@@ -28,13 +42,11 @@ choco install Cmder
 
 **注册到右键菜单**
 
-管理员身份运行powershell或者cmd
+管理员身份运行 powershell 或者 cmd
 
 ```powershell
 Cmder.exe /REGISTER ALL
 ```
-
-
 
 ## 使用
 
@@ -82,15 +94,15 @@ Microsoft.PowerShell.Utility\Write-Host "`n$" -NoNewLine -ForegroundColor "DarkG
 
 [扩展你可能有用的其他的](https://stackoverflow.com/questions/68283663/how-to-get-the-lambda-symbol-in-cmder-powershell-with-posh-git-after-the-git-i)
 
-### 添加git支持
+### 添加 git 支持
 
 ```shell
 Install-Module posh-git
 ```
 
-### 给cmder也配置系统代理
+### 给 cmder 也配置系统代理
 
-上面的启动任务得知，cmder在启动powershell desktop和pwsh的时候，都是读的cmder自定义的配置文件`C:\tools\Cmder\vendor\profile.ps1`，这里需要将代理相关的配置写入到此文件中
+上面的启动任务得知，cmder 在启动 powershell desktop 和 pwsh 的时候，都是读的 cmder 自定义的配置文件 `C:\tools\Cmder\vendor\profile.ps1`，这里需要将代理相关的配置写入到此文件中
 
 ```powershell
 # 添加到C:\tools\Cmder\vendor\profile.ps1 文件底部
@@ -116,7 +128,7 @@ Set-Alias -Name unproxyhttp -Value Disable-Proxy
 function Get-ProxyStatus {
     $httpProxy = [System.Environment]::GetEnvironmentVariable("http_proxy", [System.EnvironmentVariableTarget]::Process)
     $httpsProxy = [System.Environment]::GetEnvironmentVariable("https_proxy", [System.EnvironmentVariableTarget]::Process)
-    
+
     if ($httpProxy -or $httpsProxy) {
         Write-Host "Proxy Status:" -ForegroundColor Cyan
         Write-Host "HTTP Proxy: $httpProxy"
@@ -128,8 +140,6 @@ function Get-ProxyStatus {
 
 Set-Alias -Name proxystat -Value Get-ProxyStatus
 ```
-
-
 
 ### 美化
 

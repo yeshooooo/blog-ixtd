@@ -2,4 +2,4 @@
 
 ## 博客文章列表
 
-`<Archive />`
+<Archive />
