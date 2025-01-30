@@ -103,23 +103,19 @@ h1 {
 
 /* 通过开发者模式定位到的元素 */
 /* 基础样式 */
-.VPFeatures.VPHomeFeatures .container .items .item.grid-4 {
+.VPLink.link.no-icon.VPFeature {
   transition: transform 0.3s ease-in-out; /* 添加过渡动画 */
 }
 
 /* Hover时的变换效果 */
-.VPFeatures.VPHomeFeatures .container .items .item.grid-4:hover {
+.VPLink.link.no-icon.VPFeature:hover {
   transform: scale(1.05) translateY(-5px); /* 缩放 + 垂直位移 */
   z-index: 10; /* 防止被其他元素遮挡 */
   cursor: pointer;
 }
 
 /* 如果需要同时控制内部链接 */
-.VPFeatures.VPHomeFeatures
-  .container
-  .items
-  .item.grid-4:hover
-  .VPLink.no-icon.VPFeature {
+.VPLink.link.no-icon.VPFeature {
   transform: scale(1.02); /* 内部元素的联动缩放 */
   background-color: rgba(255, 255, 255, 0.9); /* 附加效果示例 */
 }
