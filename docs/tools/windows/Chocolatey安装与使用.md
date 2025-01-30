@@ -1,3 +1,14 @@
+---
+title: Chocolatey 安装与使用
+author: 马超
+date: 2025/1/30 8:24
+categories:
+  - tools
+tags:
+  - tools
+  - windows
+---
+
 # Chocolatey 安装与使用
 
 前排防杠：

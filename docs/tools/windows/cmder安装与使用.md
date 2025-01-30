@@ -1,12 +1,12 @@
 ---
-title: 循环结构
-author: 查尔斯
-date: 2020/10/08 8:24
+title: cmder 安装与使用
+author: 马超
+date: 2025/1/30 8:24
 categories:
-  - Java基础快速入门
+  - tools
 tags:
-  - Java
-  - Java基础
+  - tools
+  - windows
 ---
 
 # cmder 安装与使用

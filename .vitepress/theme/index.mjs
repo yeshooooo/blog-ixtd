@@ -66,14 +66,13 @@ export default {
 
     app.component("Archive", Archive); // 全局注册归档组件
     app.component("Tag", Tag); // 全局注册Tag组件
-
+    app.component("WordCloud", WordCloud); // 添加这行
     app.component("ArticleMetadata", ArticleMetadata); // 全局注册归档组件
     app.config.globalProperties.$http = axios;
     // if (typeof window !== "undefined") {
     //   window.$api = api;
     // }
 
-    app.component("WordCloud", WordCloud); // 添加这行
     app.provide("api", api); // 使用 provide 注入 API
   },
 

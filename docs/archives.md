@@ -1,5 +1,11 @@
-# 归档
+---
+title: 归档
+aside: false
+editLink: false
+lastUpdated: false
+showComment: false
+---
 
-## 博客文章列表
-
-<Archive />
+<ClientOnly>
+	<Archive />
+</ClientOnly>

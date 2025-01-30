@@ -1,7 +1,7 @@
 ---
 title: Windows 文章汇总
 author: 马超
-date: 2025/01/30 8:24
+date: 2025/1/30 8:24
 categories:
   - tools
 tags:

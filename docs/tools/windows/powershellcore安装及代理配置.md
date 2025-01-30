@@ -1,3 +1,14 @@
+---
+title: Windows 文章汇总
+author: 马超
+date: 2025/1/30 8:24
+categories:
+  - tools
+tags:
+  - tools
+  - windows
+---
+
 # powershell core 安装及代理配置
 
 防杠指南：
