@@ -11,6 +11,9 @@ tags:
 
 # vue文章汇总
 
-## plugins 常用插件
+## package 常用包
 
-[unplugin-vue-components](/front/vue/plugins/unplugin-vue-components)
+[unplugin-vue-components](/front/vue/package/unplugin-vue-components)
+
+[unplugin-auto-import](/front/vue/package/unplugin-auto-import)
+
