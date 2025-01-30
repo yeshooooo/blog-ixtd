@@ -57,4 +57,5 @@ export default [
   // 外部链接导航
   // 默认打开放生就是打开新的tag，可以使用target 控制， target: _self 是在本页
   // rel： seo用的也可以在这里设置
+  { text: "关于本站", link: "/about/thanks" },
 ];

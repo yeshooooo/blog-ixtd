@@ -8,6 +8,7 @@ const excludedFiles = [
   "archives.md",
   "me.md",
   "index.md",
+  "thanks.md",
 ];
 
 export default {
