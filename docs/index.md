@@ -18,9 +18,11 @@ features:
   - icon:
       src: https://vcpkg.io/assets/mark/mark.svg
     title: vcpkg
+    
   - icon:
       src: /features/fea-Vue.svg
     title: Vue
+    link: /front/vue/vue文章汇总
   - icon:
       src: /features/fea-TailwindCSS.svg
     title: TailwindCSS
