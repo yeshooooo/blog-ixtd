@@ -40,8 +40,10 @@ import axios from "axios";
 import api from "./api/index";
 // 引入 Arco Design Vue
 import ArcoVue from "@arco-design/web-vue";
+import ArcoVueIcon from "@arco-design/web-vue/lib/icon";
 import "@arco-design/web-vue/dist/arco.css";
-import { IconTrophy, IconShareAlt } from "@arco-design/web-vue/es/icon";
+// 修改图标导入方式
+
 import WordCloud from "./components/WordCloud.vue"; // 添加这行
 
 export default {
@@ -53,8 +55,7 @@ export default {
   enhanceApp({ app, router }) {
     // 注册 Ant Design Vue
     app.use(ArcoVue);
-    app.component("IconTrophy", IconTrophy);
-    app.component("IconShareAlt", IconShareAlt);
+    app.use(ArcoVueIcon);
     // app.component('DataPanel', DataPanel); //注册全局组件
     // if (inBrowser) {
     //   router.onAfterRouteChanged = () => {
