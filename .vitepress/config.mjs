@@ -90,7 +90,7 @@ export default defineConfig({
       color: transparent;
       
       margin: 0 5px; text-decoration: none">阿里云</a>提供云计算服务`,
-      copyright: `Copyright © 2024-${new Date().getFullYear()}&nbsp;&nbsp;<a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">粤ICP备2024313431号</a>`,
+      copyright: `Copyright © 2024-${new Date().getFullYear()}&nbsp;&nbsp;<a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank" style="text-decoration:none;" >粤ICP备2024313431号</a>`,
     },
 
     // 修改上一篇下一篇为中文
