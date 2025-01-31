@@ -24,7 +24,7 @@ features:
   - icon:
       src: /features/fea-Vue.svg
     title: Vue
-    link: /front/vue/vue文章汇总
+    link: /archives?tag=vue
   - icon:
       src: /features/fea-TailwindCSS.svg
     title: TailwindCSS
@@ -34,7 +34,7 @@ features:
   - icon:
       src: /features/fea-Tools.svg
     title: Tools
-    link: /tools/tools
+    link: /archives?tag=tools
 ---
 
 <Confetti />
