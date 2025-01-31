@@ -4,7 +4,7 @@
  * @version:
  * @Date: 2025-01-26 12:32:56
  * @LastEditors: yeshooo@马超
- * @LastEditTime: 2025-01-31 23:51:05
+ * @LastEditTime: 2025-02-01 00:26:53
  */
 export default [
   { text: '首页', link: '/' },
@@ -29,7 +29,7 @@ export default [
     items: [
       {
         text: 'vue',
-        link: '/archives?tag=vue',
+        link: '/front/vue/vue文章汇总',
       },
     ],
   },
@@ -49,11 +49,11 @@ export default [
       },
       {
         text: 'windows',
-        link: '/archives?tag=windows',
+        link: '/tools/windows/windows文章汇总',
       },
       {
         text: '开发工具',
-        link: '/archives?tag=开发工具',
+        link: '/tools/开发工具/开发工具文章汇总',
       },
     ],
   },
