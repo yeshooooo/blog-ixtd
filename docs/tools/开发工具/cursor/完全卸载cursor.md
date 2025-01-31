@@ -23,7 +23,7 @@ tags:
 ```powershell
 rm -r -fo $env:USERPROFILE\AppData\Local\Programs\cursor*
 rm -r -fo $env:USERPROFILE\AppData\Local\cursor* 
-rm -r -fo $env:env:USERPROFILE\AppData\Roaming\Cursor* 
+rm -r -fo $env:USERPROFILE\AppData\Roaming\Cursor* 
 rm -r -fo $env:USERPROFILE\.cursor*
 ```
 
