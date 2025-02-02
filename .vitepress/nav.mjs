@@ -4,7 +4,7 @@
  * @version:
  * @Date: 2025-01-26 12:32:56
  * @LastEditors: yeshooo@马超
- * @LastEditTime: 2025-02-01 00:26:53
+ * @LastEditTime: 2025-02-02 10:53:35
  */
 export default [
   { text: '首页', link: '/' },
@@ -23,7 +23,15 @@ export default [
       },
     ],
   },
-  { text: 'python', link: '/python' },
+  {
+    text: 'python',
+    items: [
+      {
+        text: '开发工具',
+        link: '/python/开发工具/开发工具文章汇总',
+      },
+    ],
+  },
   {
     text: '前端',
     items: [

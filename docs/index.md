@@ -29,6 +29,10 @@ features:
       src: /features/fea-TailwindCSS.svg
     title: TailwindCSS
   - icon:
+      src: /features/fea-Python.svg
+    title: Python
+    link: /python/python文章汇总
+  - icon:
       src: /features/fea-unrealengine.svg
     title: UnrealEngine
   - icon:
