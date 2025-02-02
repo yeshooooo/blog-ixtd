@@ -12,6 +12,7 @@ features:
   - icon:
       src: /features/fea-cmake.svg
     title: Cmake
+    link: /cpp/cmake/
   - icon:
       src: /features/fea-Conan.svg
     title: Conan
