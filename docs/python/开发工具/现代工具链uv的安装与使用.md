@@ -9,10 +9,7 @@ tags:
   - tools
   - 开发工具
 ---
-
 # 现代工具链uv的安装与使用
-
-
 
 ## 安装
 
@@ -37,8 +34,6 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 windows下安装在了 `%USERPROFILE%/.local/bin`下的uv.exe和uvx.exe两个文件
 
 ### pip安装
-
-
 
 ### 更新
 
@@ -92,11 +87,9 @@ uv init projectx
 uv venv myenv --python 3.11
 ```
 
-
-
 初始化完项目之类立即执行,这时候会自动创建虚拟环境和uv.lock文件(uv.lock文件由uv自动管理，不要修改里面的内容)
 
-如果没有创建虚拟环境，使用`uv sync`命令会自动创建`.venv`虚拟环境
+如果没有创建虚拟环境，使用 `uv sync`命令会自动创建 `.venv`虚拟环境
 
 ```shell
 uv sync
@@ -120,19 +113,17 @@ uv run hello.py
 uv pip compile pyproject.toml -o requirements.txt
 ```
 
-从`requirements.txt`中安装依赖
+从 `requirements.txt`中安装依赖
 
 ```shell
 uv pip install -r requirements.txt
 ```
 
-当然也可以从`pyproject.toml`安装
+当然也可以从 `pyproject.toml`安装
 
 ```shell
 uv pip install -r pyproject.toml
 ```
-
-
 
 ### 添加依赖
 
@@ -146,9 +137,6 @@ uv add 包名
 uv pip install 包名
 ```
 
-
-
 ### uv还可以集成各种框架，CI/CD工具等
 
 [进阶使用查看官方文档](https://docs.astral.sh/uv/guides/integration/fastapi/#migrating-an-existing-fastapi-project)
-

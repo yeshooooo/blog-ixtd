@@ -8,7 +8,6 @@ tags:
   - tools
   - windows
 ---
-
 # cmder 安装与使用
 
 前排送杠精：
@@ -137,6 +136,12 @@ function Get-ProxyStatus {
 
 Set-Alias -Name proxystat -Value Get-ProxyStatus
 ```
+
+## 解决python中虚拟环境创建得时候权限问题
+
+`C:\tools\Cmder\vendor\profile.ps1`中第 223行去掉 `-Options ReadOnly`
+
+![1738917867425](image/cmder安装与使用/1738917867425.png)
 
 ### 美化
 
