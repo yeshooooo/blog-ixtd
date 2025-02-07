@@ -82,7 +82,7 @@ prompt_lambSymbol = "$"
 
 **powershell/pwsh 的**
 
-修改 `C:\tools\Cmder\vendor\profile.ps1`中第 111 行为
+修改 `C:\tools\Cmder\config\user_profile.ps1`中为
 
 ```powershell
 Microsoft.PowerShell.Utility\Write-Host "`n$" -NoNewLine -ForegroundColor "DarkGray"
@@ -98,10 +98,10 @@ Install-Module posh-git
 
 ### 给 cmder 也配置系统代理
 
-上面的启动任务得知，cmder 在启动 powershell desktop 和 pwsh 的时候，都是读的 cmder 自定义的配置文件 `C:\tools\Cmder\vendor\profile.ps1`，这里需要将代理相关的配置写入到此文件中
+上面的启动任务得知，cmder 在启动 powershell desktop 和 pwsh 的时候，都是读的 cmder 自定义的配置文件 `C:\tools\Cmder\config\user_profile.ps1`，这里需要将代理相关的配置写入到此文件中
 
 ```powershell
-# 添加到C:\tools\Cmder\vendor\profile.ps1 文件底部
+# C:\tools\Cmder\config\user_profile.ps1 文件底部
 $global:proxyUrl = "http://127.0.0.1:10808"
 
 function Enable-Proxy {
@@ -137,11 +137,36 @@ function Get-ProxyStatus {
 Set-Alias -Name proxystat -Value Get-ProxyStatus
 ```
 
-## 解决python中虚拟环境创建得时候权限问题
+### 解决python中虚拟环境创建得时候权限问题
 
-`C:\tools\Cmder\vendor\profile.ps1`中第 223行去掉 `-Options ReadOnly`
+`C:\tools\Cmder\config\user_profile.ps1`中去掉 `-Options ReadOnly`
 
 ![1738917867425](image/cmder安装与使用/1738917867425.png)
+
+### 集成conda到cmder
+
+cmd因为不会使用额外的启动文件，所以任何一个终端执行下面的命令就会集成进所有终端
+
+```shell
+conda init --all
+```
+
+但是因为在cmder中powershell使用自己的配置文件，所以要在`C:\tools\Cmder\config\user_profile.ps1`加入下面配置
+
+```powershell
+#region conda initialize
+# !! Contents within this block are managed by 'conda init' !!
+If (Test-Path "C:\ProgramData\miniconda3\Scripts\conda.exe") {
+    (& "C:\ProgramData\miniconda3\Scripts\conda.exe" "shell.powershell" "hook") | Out-String | ?{$_} | Invoke-Expression
+}
+#endregion
+```
+
+![](https://pic.ixtd.com/images/2025/02/08/202502080016079880d47c9821626dbc6.png)
+
+配置正确后如图
+
+![](https://pic.ixtd.com/images/2025/02/08/2025020800274449518d9aa50d7ac846b.png)
 
 ### 美化
 

@@ -77,7 +77,7 @@ uv init projectx
 
 ![image-20250202095233482](https://pic.ixtd.com/images/2025/02/02/image-20250202095233482.png)
 
-创建虚拟环境
+### 创建虚拟环境
 
 `uv venv xxx --python 版本`
 
@@ -86,6 +86,7 @@ uv init projectx
 ```shell
 uv venv myenv --python 3.11
 ```
+
 
 初始化完项目之类立即执行,这时候会自动创建虚拟环境和uv.lock文件(uv.lock文件由uv自动管理，不要修改里面的内容)
 
