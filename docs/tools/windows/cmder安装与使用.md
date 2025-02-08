@@ -151,9 +151,10 @@ cmd因为不会使用额外的启动文件，所以任何一个终端执行下�
 conda init --all
 ```
 
-但是因为在cmder中powershell使用自己的配置文件，所以要在`C:\tools\Cmder\config\user_profile.ps1`加入下面配置
+但是因为在cmder中powershell使用自己的配置文件，所以要在 `C:\tools\Cmder\config\user_profile.ps1`加入下面配置
 
 ```powershell
+
 #region conda initialize
 # !! Contents within this block are managed by 'conda init' !!
 If (Test-Path "C:\ProgramData\miniconda3\Scripts\conda.exe") {
@@ -162,7 +163,19 @@ If (Test-Path "C:\ProgramData\miniconda3\Scripts\conda.exe") {
 #endregion
 ```
 
-![](https://pic.ixtd.com/images/2025/02/08/202502080016079880d47c9821626dbc6.png)
+如果是anaconda的话就是
+
+```
+
+#region conda initialize
+# !! Contents within this block are managed by 'conda init' !!
+If (Test-Path "C:\ProgramData\anaconda3\Scripts\conda.exe") {
+    (& "C:\ProgramData\anaconda3\Scripts\conda.exe" "shell.powershell" "hook") | Out-String | ?{$_} | Invoke-Expression
+}
+#endregion
+```
+
+![img](https://pic.ixtd.com/images/2025/02/08/202502080016079880d47c9821626dbc6.png)
 
 配置正确后如图
 
