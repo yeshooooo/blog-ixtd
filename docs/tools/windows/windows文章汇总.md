@@ -8,7 +8,6 @@ tags:
   - tools
   - windows
 ---
-
 # Windows 文章汇总
 
 [powershellcore 安装及代理配置](/tools/windows/powershellcore安装及代理配置)
@@ -16,3 +15,5 @@ tags:
 [cmder 安装与使用](/tools/windows/cmder安装与使用)
 
 [Chocolatey 安装与使用](/tools/windows/Chocolatey安装与使用)
+
+[wsl和windows相互访问文件](/tools/windows/wsl和windows相互访问文件)
