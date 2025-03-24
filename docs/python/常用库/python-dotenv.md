@@ -8,7 +8,6 @@ tags:
   - python
   - packages
 ---
-
 # python-dotenv
 
 将环境变量放在.env中，而不是设置全局环境变量或者硬编码到代码中
@@ -30,8 +29,6 @@ key=value #注释
 ```shell
 pip install python-dotenv
 ```
-
-
 
 ## 使用
 
@@ -56,5 +53,5 @@ from dotenv import load_dotenv
 load_env()
 # 使用
 app.config["XXXX"] = os.getenv("XXXX")
-```
 
+```
