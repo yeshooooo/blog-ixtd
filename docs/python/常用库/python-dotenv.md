@@ -42,6 +42,17 @@ load_dotenv()
 XXXXX = os.getenv("XXXXX")
 ```
 
+加载所有.env种的环境变量
+
+```python
+from dotenv import load_dotenv, find_dotenv
+_ = load_dotenv(find_dotenv(), verbose=True) 
+```
+
+
+
+
+
 如在flask中
 
 ```python
