@@ -11,3 +11,5 @@ tags:
 # langchain文章汇总
 
 [langchain接入各种模型](/ai/langchain/langchain接入各种模型)
+
+[01messages](/ai/langchain/01messages)
