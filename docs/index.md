@@ -40,6 +40,9 @@ features:
       src: /features/fea-Tools.svg
     title: Tools
     link: /tools/tools
+  - icon:
+      src: /features/fea-langchain.svg
+    title: LangChain
+    link: /ai/langchain/langchain文章汇总
 ---
-
 <Confetti />

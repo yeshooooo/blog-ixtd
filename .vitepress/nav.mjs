@@ -4,7 +4,7 @@
  * @version:
  * @Date: 2025-01-26 12:32:56
  * @LastEditors: yeshooo@马超
- * @LastEditTime: 2025-02-02 10:53:35
+ * @LastEditTime: 2025-03-28 14:23:12
  */
 export default [
   { text: '首页', link: '/' },
@@ -44,6 +44,14 @@ export default [
   { text: 'cg', link: '/cg' },
   { text: 'cv', link: '/cv' },
   { text: 'ue', link: '/ue' },
+  { text: 'ai',
+    items: [
+      {
+        text: 'langchain',
+        link: '/ai/langchain/langchain文章汇总',
+      }
+    ]
+  },
   {
     text: 'tools',
     items: [
