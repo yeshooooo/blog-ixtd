@@ -15,9 +15,8 @@ tags:
 
 [pytorch安装](/python/开发工具/pytorch安装)
 
-
+[vscode配置python开发环境](/python/开发工具/vscode配置python开发环境)
 
 ## 常用库
 
 [python-dotenv](/python/常用库/python-dotenv)
-
