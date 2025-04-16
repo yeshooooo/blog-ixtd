@@ -9,7 +9,6 @@ tags:
   - tools
   - 开发工具
 ---
-
 # vscode配置python开发环境
 
 ## 1. 安装插件
@@ -20,7 +19,7 @@ tags:
 
 ## 2. 配置pylance
 
-打开设置`快捷键ctrl + ,`搜索以下设置进行配置，以下配置很多是我个人习惯
+打开设置 `快捷键ctrl + ,`搜索以下设置进行配置，以下配置很多是我个人习惯
 
 ### python.languageServer
 
@@ -38,7 +37,7 @@ tags:
 
 ![image-20250416165535937](https://pic.ixtd.com/images/2025/04/16/image-20250416165535937.png)
 
-## 修改工作目录
+## 3.修改工作目录
 
 vscode中默认工作目录为根目录，不会像pycharm一样自动切换到py文件所在目录，需要设置一下工作目录才能让非根目录中的文件正确识别路径
 
@@ -73,7 +72,7 @@ vscode中默认工作目录为根目录，不会像pycharm一样自动切换到p
 }
 ```
 
-###  修改python设置中可以在终端自动切换工作目录
+### 修改python设置中可以在终端自动切换工作目录
 
 勾选python.Terminal.Execute in File Dir
 
@@ -93,15 +92,15 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(current_dir)
 ```
 
-## 开启自动导入功能
+## 4.开启自动导入功能
 
-搜索`python.analysis.show Only Direct Dependencies In Auto Import`
+搜索 `python.analysis.show Only Direct Dependencies In Auto Import`
 
 这样就可以在错误修复中显示导入
 
 ![image-20250416170200399](https://pic.ixtd.com/images/2025/04/16/image-20250416170200399.png)
 
-## debug
+## 5.debug
 
 设置下面两张图的地方
 
@@ -109,7 +108,7 @@ os.chdir(current_dir)
 
 ![image-20250416170401127](https://pic.ixtd.com/images/2025/04/16/image-20250416170401127.png)
 
-## 导入同项目中其他模块
+## 6.导入同项目中其他模块
 
 `ctrl+shift+p`打开配置文件
 
@@ -131,4 +130,3 @@ os.chdir(current_dir)
     "PYTHONPATH": "${workspaceFolder}",
   },
 ```
-
