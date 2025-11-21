@@ -60,6 +60,10 @@ export default [
         link: '/tools/linux',
       },
       {
+        text: 'jetson',
+        link: '/tools/jetson',
+      },
+      {
         text: 'mac',
         link: '/tools/mac',
       },

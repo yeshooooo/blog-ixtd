@@ -28,8 +28,13 @@ tags:
 ## 刷机
 
 切换到组件安装位置，使用下面的命令刷机
+我这里组件安装位置如下
+```shell
+~/nvidia/nvidia_sdk/JetPack_6.2.1_Linux_JETSON_ORIN_NANO_TARGETS/Linux_for_Tegra
+```
 
 ```shell
+cd ~/nvidia/nvidia_sdk/JetPack_6.2.1_Linux_JETSON_ORIN_NANO_TARGETS/Linux_for_Tegra
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1 \
   -c tools/kernel_flash/flash_l4t_t234_nvme.xml -p "-c bootloader/generic/cfg/flash_t234_qspi.xml" \
   --showlogs --network usb0 jetson-orin-nano-devkit-super internal
