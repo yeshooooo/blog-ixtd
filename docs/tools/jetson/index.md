@@ -10,4 +10,5 @@ tags:
 ---
 # jetson 文章汇总
 
-- [jetson命令行刷机.md](/tools/jetson/jetson命令行刷机)
+- [jetson命令行刷机](/tools/jetson/jetson命令行刷机)
+- [部署yolo模型到jetson](/tools/jetson/部署yolo模型到jetson)
